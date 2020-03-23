@@ -12,7 +12,8 @@ Create a `tar`/`tar.gz`/`tar.bz2` file from many s3 files and stream back into s
 
 ## Usage
 
-Set the environment variable `S3_ENDPOINT_URL` to use a custom s3 host (minio/etc...)  
+Set the environment variable `S3_ENDPOINT_URL` to use a custom s3 host (minio/etc...).
+With `S3_ACCESS` and `S3_SECRET_ACCESS` you can provide custom credentials.
 
 This will use very little RAM. As it downloads files, it streams up the tar'd pieces as it goes.  
 You can use more or less ram by playing with the options `cache_size` & `part_size_multiplier`.  

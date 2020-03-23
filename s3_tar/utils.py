@@ -25,6 +25,8 @@ def _create_s3_client(session, pool_size=10, max_retries=4):
     return session.client(
         's3',
         endpoint_url=os.getenv('S3_ENDPOINT_URL'),
+        aws_access_key_id=os.getenv('S3_ACCESS'),
+        aws_secret_access_key=os.getenv('S3_SECRET_ACCESS'),
         config=config,
     )
 
